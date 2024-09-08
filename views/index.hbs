@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+{{#if isAuthenticated}}
+<p>Hai {{username}}</p>
+<a href="/user/id">View ID token claims</a>
+<br>
+<a href="/auth/acquireToken">Acquire a token to call Microsoft Graph API</a>
+<br><br>
+{{!-- <button><a href="/auth/sites">Update Summary menggunakan AI</a></button> --}}
+<br><br>
+<button><a href="/auth/get-delta">Get Delta Link</a></button>
+<br><br>
+<button><a href="/auth/get-changes">Check Changes</a></button>
+<br><br>
+<a href="/auth/signout">Sign Out</a>
+{{else}}
+<p>Selamat datang di {{title}}</p>
+<a href="/auth/signin">Sign In</a>
+{{/if}}
